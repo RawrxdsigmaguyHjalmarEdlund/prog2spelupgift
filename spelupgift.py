@@ -1,9 +1,9 @@
 import random
 
 class spelare:
-    def __init__(self, namn):
-        self.__namn = namn
-        self.__monster
+    def __init__(self):
+        self.__namn = "namn"
+        self.__monster = monster
     def set_namn(self, namn):
         self.__namn = namn
 
@@ -17,13 +17,13 @@ class spelare:
         return self.__monster
         
 class monster:
-    def __init__(self):
-        namn = namn
-        hp = hp
-        attack = attack
+    def __init__(self, namn, hp, attack):
+        self.namn = namn
+        self.hp = hp
+        self.attack = attack
 
     def pss(self):
-        print(self.namn, self.hp, self.attack)
+        print(f"{self.namn}: HP {self.hp}, attack {self.attack}")
 
     def slå(self):
         return random.randint(1, self.attack)
@@ -47,5 +47,5 @@ monsterlista = [
 ]
 
 for monster in monsterlista:
-    monster.pss
+    monster.pss()
 
